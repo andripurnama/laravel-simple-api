@@ -70,6 +70,13 @@ php artisan migrate
 php artisan queue:listen
 ```
 
+8. Run the project :
+
+```
+php artisan serve
+
+```
+
 ## Testing
 
 To run tests for the API, execute the following command:
@@ -78,4 +85,13 @@ To run tests for the API, execute the following command:
 vendor/bin/phpunit-watcher watch
 ```
 
-or you can try to use HTTP Client Application testing like postman or insomnia
+or you can try to use HTTP Client Application testing like postman or insomnia with path http://localhost:8000/api/submit and the body use JSON format like this
+
+```
+{
+    "name": "john doe",
+    "email": "john.doe@example.com",
+    "message": "This is a message test"
+}
+
+```
